@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>To do tasks</title>
+</head>
+
+<body>
+  <!-- .................................side bar bro ...................................................... -->
+  <div class="container">
+    <div class="sidebar">
+      <header class="header" role="banner">
+        <h1 class="logo">
+          <a href="#"> <i class="fa-solid fa-bars fa-rotate-90"></i>
+            kanban<span></span></a>
+        </h1>
+        <div class="nav-wrap">
+          <nav class="main-nav" role="navigation">
+            <ul class="unstyled list-hover-slide">
+              <li><a href="#"><i class="fa-solid fa-table-cells-large" style="color:white"></i> Platform Launch</a></li>
+              <li><a href="#"><i class="fa-solid fa-table-cells-large" style="color:white"></i> Marketing Plan</a></li>
+              <li><a href="#"><i class="fa-solid fa-table-cells-large" style="color:white"></i> Roadmap</a></li>
+              <li>
+                <h3 href="#" style="color:rgb(121, 121, 207)"><i class="fa-solid fa-table-cells-large"
+                    style="color:rgb(121, 121, 207)"></i> +Create New Board</h3>
+              </li>
+            </ul>
+          </nav>
+          
+          <button onclick="myFunction()">Toggle theme</button>
+        </div>
+      </header>
+    </div>
+
+
+
+    <!-- ................top navbar..........................................  -->
+    <div class="container1">
+      <div class="navbar">
+
+        <div class="navText">
+          <h1>Platform Launch</h1>
+        </div>
+        <button id="button">+ add new task</button>
+
+      </div>
+
+
+
+      <!-- ...................task containers................................ -->
+      <div class="task-list">
+        <!-- todo -->
+        <div id="Todo" class="task-priority">
+
+          <h3><i class="fa-solid fa-circle" style="color:aqua"></i> ToDo <span id="idTodo">(0)</span></h3>
+          <ul class="todoul list">
+
+          </ul>
+        </div>
+
+
+
+        <!-- .................doing -->
+        <div id="Doing" class="task-priority">
+          <h3><i class="fa-solid fa-circle" style="color:rgb(100,95,197)"></i> Doing<span id="idDoing">(0)</span></h3>
+          <ul class="doingul list">
+
+          </ul>
+        </div>
+
+
+
+        <!-- done -->
+        <div id="Done" class="task-priority">
+          <h3><i class="fa-solid fa-circle" style="color:greenyellow"></i> Done<span id="idDone">(0)</span></h3>
+          <ul class="doneul list">
+
+          </ul>
+
+        </div>
+      </div>
+
+
+
+      <!-- ................popup vala form that will display part-1..................................... -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <form id="form">
+            <span class="close" style="color:aliceblue">&times;</span>
+            <h2>Add New Task</h2>
+
+            <label for="title">Title</label><br>
+            <input placeholder="eg:Take a coffee break" type="text" id="title" name="title"><br><br>
+
+
+            <label for="desc" class="desc">Description</label><br>
+            <textarea placeholder="write some description or write some lyrics" rows="4" cols="50" name="comment"
+              id="desc">
+                </textarea> <br>
+
+
+            <label>subtask</label><br>
+            <input type="text" id="sub" name="sub" placeholder="Make a cup of coffee"><br><br>
+            <input type="text" id="sub" name="sub" placeholder="Drink a coffee and smile"><br><br>
+
+
+            <label for="taskPriority">Status</label><br>
+            <select id="taskPriority" name="taskPriority">
+              <option value="Todo">Todo</option>
+              <option value="Doing">Doing</option>
+              <option value="Done">Done</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" id="formBtn" value="create task">
+            <!-- <button id = "formBtn" >create task</button>  -->
+          </form>
+
+
+
+
+
+
+          <!-- ................popup vala form that will display part-2 (nested popup in button)..................................... -->
+          <div id="modal2" class="modal2">
+            <div class="modal-content2">
+              <span class="close2">&times;</span>
+              <h2>Research pricing points of various <br>
+                competitors and trial different business <br>
+                models</h2>
+
+              <h5>We know what we're planning to build for version one.Now we <br>
+                need to finalise the first pricing model we'll use .Keep iterating the <br>
+                the subtasks until we have a coherent position</h5>
+
+              <h3>Subtastaks</h3>
+
+              <input type="checkbox" id="t1" name="t1" value="t1">
+              <label for="t1"> Research competitor pricing and business models</label><br>
+              <input type="checkbox" id="t" name="t2" value="t2">
+              <label for="t2"> Outline a business model that works for our solution</label><br>
+              <input type="checkbox" id="t3" name="t3" value="t3">
+              <label for="t3">Talk to potential customers about our pruposed solution and ask for fair price expectancy
+
+              </label><br><br>
+
+              <label for="taskPriority">Status</label><br>
+              <select id="taskPriority" name="taskPriority">
+                <option value="Todo">Todo</option>
+                <option value="Doing">Doing</option>
+                <option value="Done">Done</option>
+              </select>
+              <br><br>
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="script.js"></script>
+</body>
+
+</html>
